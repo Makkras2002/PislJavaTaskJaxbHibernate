@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.ST.org/students" xmlns:tns="http://www.ST.org/students">
+
+    <element name="students">
+        <complexType>
+            <sequence>
+                <element ref="tns:student" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+
+    <complexType name="info">
+        <sequence>
+            <element name="name" type="string"/>
+            <element name="surname" type="string"/>
+            <element name="father_name" type="string"/>
+            <element name="birth_date" type="date"/>
+            <element name="is_male" type="boolean"/>
+            <element name="passport_series" type="string"/>
+            <element name="passport_number" type="string"/>
+            <element name="home_cities" type="tns:cities"/>
+            <element name="living_address" type="string"/>
+            <element name="citizenship" type="tns:cships"/>
+            <element name="is_fit_to_serv_in_the_army" type="boolean"/>
+        </sequence>
+        <attribute name="id" type="long" use="required"/>
+        <attribute name="identification_number" type="string" use="optional"/>
+        <attribute name="home_tel" type="string" use="optional"/>
+        <attribute name="mob_tel" type="string" use="optional"/>
+    </complexType>
+    <complexType name="cities">
+        <sequence>
+            <element maxOccurs="unbounded" name="city" type="string"/>
+        </sequence>
+    </complexType>
+    <complexType name="cships">
+        <sequence>
+            <element maxOccurs="unbounded" name="cship" type="string"/>
+        </sequence>
+    </complexType>
+    <element name="student" type="tns:info"/>
+</schema>

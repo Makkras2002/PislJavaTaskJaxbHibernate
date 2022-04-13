@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<res:students
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:res="http://www.ST.org/students"
+        xsi:schemaLocation="http://www.ST.org/students  schema.xsd">
+  <res:student identification_number="BLR777" home_tel="333222811" mob_tel="775842113" id="0">
+    <name>Maksim</name>
+    <surname>Shpak</surname>
+    <father_name>Igorevich</father_name>
+    <birth_date>2002-08-29</birth_date>
+    <is_male>true</is_male>
+    <passport_series>MP</passport_series>
+    <passport_number>9483974</passport_number>
+    <home_cities>
+      <city>Minsk</city>
+      <city>Brest</city>
+      <city>Vitebsk</city>
+      <city>Grodno</city>
+      <city>Mogilev</city>
+    </home_cities>
+    <living_address>Minsk</living_address>
+    <citizenship>
+      <cship>Belorussian</cship>
+      <cship>Russian</cship>
+    </citizenship>
+    <is_fit_to_serv_in_the_army>false</is_fit_to_serv_in_the_army>
+  </res:student>
+  <res:student identification_number="BLR445" mob_tel="775842113" id="1">
+    <name>Tomas</name>
+    <surname>Regby</surname>
+    <father_name>Pedrosovich</father_name>
+    <birth_date>1995-01-07</birth_date>
+    <is_male>true</is_male>
+    <passport_series>VV</passport_series>
+    <passport_number>1213232</passport_number>
+    <home_cities>
+      <city>Moscow</city>
+      <city>Berlin</city>
+      <city>Dublin</city>
+      <city>Vatican-city</city>
+    </home_cities>
+    <living_address>Vatican-city</living_address>
+    <citizenship>
+      <cship>Italian</cship>
+      <cship>Russian</cship>
+      <cship>Irish</cship>
+      <cship>German</cship>
+    </citizenship>
+    <is_fit_to_serv_in_the_army>true</is_fit_to_serv_in_the_army>
+  </res:student>
+</res:students>
