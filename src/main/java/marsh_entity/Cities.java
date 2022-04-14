@@ -37,6 +37,13 @@ public class Cities {
     @XmlElement(required = true)
     protected List<String> city;
 
+    public Cities() {
+    }
+
+    public Cities(List<String> city) {
+        this.city = city;
+    }
+
     /**
      * Gets the value of the city property.
      * 

@@ -6,10 +6,9 @@ import org.apache.logging.log4j.Logger;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class CustomXmlMarshallingHandler {
     private static CustomXmlMarshallingHandler instance;
@@ -39,5 +38,14 @@ public class CustomXmlMarshallingHandler {
             e.printStackTrace();
         }
         return students;
+    }
+    public void marsh(String xmlFilePath, StudentsInfo studentsInfo){
+        try(FileOutputStream fileOutputStream = new FileOutputStream(xmlFilePath)) {
+            Marshaller marshaller = jaxbContext.createMarshaller();
+            marshaller.marshal(studentsInfo, fileOutputStream);
+            marshaller.marshal(studentsInfo,System.out);
+        } catch (JAXBException | IOException e) {
+            e.printStackTrace();
+        }
     }
 }

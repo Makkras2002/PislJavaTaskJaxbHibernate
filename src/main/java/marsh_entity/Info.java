@@ -91,6 +91,31 @@ public class Info {
     @XmlAttribute(name = "mob_tel")
     protected String mobTel;
 
+    public Info(){
+    }
+
+    public Info(String name, String surname, String fatherName, XMLGregorianCalendar birthDate,
+                boolean isMale, String passportSeries, String passportNumber,
+                Cities homeCities, String livingAddress, Cships citizenship,
+                boolean isFitToServInTheArmy, long id, String identificationNumber,
+                String homeTel, String mobTel) {
+        this.name = name;
+        this.surname = surname;
+        this.fatherName = fatherName;
+        this.birthDate = birthDate;
+        this.isMale = isMale;
+        this.passportSeries = passportSeries;
+        this.passportNumber = passportNumber;
+        this.homeCities = homeCities;
+        this.livingAddress = livingAddress;
+        this.citizenship = citizenship;
+        this.isFitToServInTheArmy = isFitToServInTheArmy;
+        this.id = id;
+        this.identificationNumber = identificationNumber;
+        this.homeTel = homeTel;
+        this.mobTel = mobTel;
+    }
+
     /**
      * Gets the value of the name property.
      * 

@@ -22,12 +22,15 @@ public class Main {
         }
         List<Student> studentForDb = CustomStudentConverter.getInstance().convertInfoToListOfStudents(studentsFromXml);
         DataDao dataDao = new DataDao();
-//        for(Student student : studentForDb) {
-//            dataDao.savaData(student);
-//        }
+        for(Student student : studentForDb) {
+            dataDao.savaData(student);
+        }
+//        List<Student> studentForDb = dataDao.getAll();
         studentForDb = dataDao.getAll();
         for (Student student : studentForDb) {
             logger.info(student.toString());
         }
+//        StudentsInfo studentsForXml = CustomStudentConverter.getInstance().convertListOfStudentsToInfo(studentForDb);
+//        CustomXmlMarshallingHandler.getInstance().marsh("sourcefile/students.xml",studentsForXml);
     }
 }

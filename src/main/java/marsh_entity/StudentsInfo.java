@@ -39,6 +39,13 @@ public class StudentsInfo {
     @XmlElement(namespace = "http://www.ST.org/students", required = true)
     protected List<Info> student;
 
+    public StudentsInfo() {
+    }
+
+    public StudentsInfo(List<Info> student) {
+        this.student = student;
+    }
+
     /**
      * Gets the value of the student property.
      * 

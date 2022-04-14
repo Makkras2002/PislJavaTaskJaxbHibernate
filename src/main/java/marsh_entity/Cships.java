@@ -39,6 +39,12 @@ public class Cships {
     @XmlElement(required = true)
     protected List<String> cship;
 
+    public Cships() {
+    }
+    public Cships(List<String> cship) {
+        this.cship = cship;
+    }
+
     /**
      * Gets the value of the cship property.
      * 
